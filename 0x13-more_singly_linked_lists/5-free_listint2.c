@@ -14,6 +14,11 @@ void free_listint2(listint_t **head)
 	listint_t *last;
 	listint_t *newn = *head;
 
+	if (newn == NULL)
+	{
+		return;
+	}
+
 	while (newn != NULL)
 	{
 		last = newn->next;
