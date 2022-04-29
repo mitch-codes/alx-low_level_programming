@@ -13,8 +13,8 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i, j, l;
 	unsigned int k = 0;
-	unsigned int len1 = strlen(s);
-	unsigned int len2 = strlen(accept);
+	unsigned int len1 = strlen(accept);
+	unsigned int len2 = strlen(s);
 	unsigned int len3 = len1 + len2;
 	char *temp;
 
@@ -26,20 +26,20 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			int match = 0;
 
-			if (s[i] == accept[j])
+			if (accept[i] == s[j])
 			{
-				if (s[i] != ' ')
+				if (accept[i] != ' ')
 				{
 					for (l = 0; l < len3; l++)
 					{
-					if (temp[l] == s[i])
+					if (temp[l] == accept[i])
 					{
 						match = 1;
 					}
 					}
 					if (match < 1)
 					{
-						temp[k] = s[i];
+						temp[k] = accept[i];
 						k++;
 					}
 				}
