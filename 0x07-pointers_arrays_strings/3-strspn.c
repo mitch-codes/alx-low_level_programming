@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * _strspn - find characters common in both arrays without repetion
@@ -10,32 +11,41 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int result = 0;
-	unsigned int l = strlen(s);
-	char e;
+	unsigned int i, j, l;
+	unsigned int k = 0;
+	unsigned int len1 = strlen(s);
+	unsigned int len2 = strlen(accept);
+	unsigned int len3 = len1 + len2;
+	char *temp;
 
-	for (i = 0; i < l; i++)
+	temp = malloc(len3 + 1);
+
+	for (i = 0; i < len1; i++)
 	{
-		if (s[i] != '\0')
+		for (j = 0; j < len2; j++)
 		{
-			for (j = 0; j <= l; j++)
+			int match = 0;
+
+			if (s[i] == accept[j])
 			{
-				if (s[i] == accept[j])
+				if (s[i] != ' ')
 				{
-					if (accept[j] != '\0')
+					for (l = 0; l < len3; l++)
 					{
-					if (e != accept[j])
+					if (temp[l] == s[i])
 					{
-					result++;
+						match = 1;
 					}
-					e = accept[j];
+					}
+					if (match < 1)
+					{
+						temp[k] = s[i];
+						k++;
 					}
 				}
 			}
 		}
 	}
-
-	return (result);
+	printf("%d\n", k);
+	return (k);
 }
