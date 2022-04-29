@@ -46,6 +46,5 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 	}
-	printf("%d\n", k);
 	return (k);
 }
