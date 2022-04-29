@@ -11,7 +11,7 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, l;
+	unsigned int i, j, l, m;
 	unsigned int k = 0;
 	unsigned int len1 = strlen(accept);
 	unsigned int len2 = strlen(s);
@@ -20,6 +20,10 @@ unsigned int _strspn(char *s, char *accept)
 
 	temp = malloc(len3 + 1);
 
+	for (m = 0; m < len3; m++)
+	{
+		temp[m] = 0;
+	}
 	for (i = 0; i < len1; i++)
 	{
 		for (j = 0; j < len2; j++)
@@ -45,6 +49,8 @@ unsigned int _strspn(char *s, char *accept)
 				}
 			}
 		}
+	
 	}
+	printf("%li\n", strspn(s, accept));
 	return (k);
 }
