@@ -11,18 +11,21 @@ void print_binary(unsigned long int n)
 {
 	int y = (int) n;
 	int i , j, rem;
-	unsigned long int k;
+	int k;
 
 	for (i = 0; n != 0; i++)
 	{
 		n = n >> 1;
 	}
 
-	for (j = 0; j < i; j++)
+	for (j = i - 1; j >= 0; j--)
 	{
-		rem = y & 1;
-		y = y >> 1;
-		printf("%d", ~rem + 1);
+		k = y >> j;
+		rem = k & 1;
+		printf("%d", rem);
 	}
-	printf("\n");
+	if (n == 0)
+	{
+		printf("0");
+	}
 }
