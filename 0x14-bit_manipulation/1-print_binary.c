@@ -3,40 +3,30 @@
 #include <string.h>
 
 /**
- * binary_to_uint - convert binary to decimal
+ * print_binary - print binary from int
  *
- * @b: string of number being converted
- * Return: decimal value
+ * @n: the decimal to be converted
  */
-unsigned int binary_to_uint(const char *b)
+void print_binary(unsigned long int n)
 {
-	int i, j, result;
-	int sum = 0;
-	int length = strlen(b);
-	int temp = 1;
+	int y = (int) n;
+	int i, k, j, *stomp;
 
-	for (i = 0; i < length; i++)
+	for (i = 0; n != 0; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
-		{
-			return (0);
-		}
+		n = n / 2;
 	}
-	for (j = length - 1; j >= 0; j--)
-	{
-		char ch = b[j] - 48;
 
-		if (j > length)
-		{
-			sum = sum + ch * 1;
-		}
-		else
-		{
-			temp = temp * 2;
-			sum = sum + (ch * temp);
-		}
+	stomp = malloc(sizeof(char) * i);
+
+	for (j = i - 1; y != 0; j--)
+	{
+		stomp[j] = y % 2;
+		y = y / 2;
 	}
-	sum = sum / 2;
-	result = (unsigned int) sum;
-	return (result);
+	for (k = 0; k < i; k++)
+	{
+		printf("%d", stomp[k]);
+	}
+	free (stomp);
 }
