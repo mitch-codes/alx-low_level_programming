@@ -11,7 +11,8 @@ void print_binary(unsigned long int n)
 {
 	int y = (int) n;
 	int i , j, rem;
-	int k;
+	int k = (int) n;
+	int l = (int) n;
 
 	for (i = 0; n != 0; i++)
 	{
@@ -24,8 +25,8 @@ void print_binary(unsigned long int n)
 		rem = k & 1;
 		putchar(rem + 48);
 	}
-	if (n == 0)
+	if (l == 0)
 	{
-		printf("0");
+		putchar('0');
 	}
 }

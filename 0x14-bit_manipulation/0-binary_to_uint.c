@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		}
 	}
-	for (j = length - 1; j >= 0; j--)
+	for (j = length - 2; j > 0; j--)
 	{
 		char ch = b[j] - 48;
 
