@@ -10,23 +10,19 @@
 void print_binary(unsigned long int n)
 {
 	int y = (int) n;
-	int i, k, j, *stomp;
+	int i , j, rem;
+	unsigned long int k;
 
 	for (i = 0; n != 0; i++)
 	{
-		n = n / 2;
+		n = n >> 1;
 	}
 
-	stomp = malloc(sizeof(char) * i);
-
-	for (j = i - 1; y != 0; j--)
+	for (j = 0; j < i; j++)
 	{
-		stomp[j] = y % 2;
-		y = y / 2;
+		rem = y & 1;
+		y = y >> 1;
+		printf("%d", ~rem + 1);
 	}
-	for (k = 0; k < i; k++)
-	{
-		printf("%d", stomp[k]);
-	}
-	free (stomp);
+	printf("\n");
 }
