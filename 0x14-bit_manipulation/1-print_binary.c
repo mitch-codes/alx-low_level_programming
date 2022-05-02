@@ -10,7 +10,7 @@
 void print_binary(unsigned long int n)
 {
 	int y = (int) n;
-	int i , j, rem;
+	int i, j, rem;
 	int k = (int) n;
 	int l = (int) n;
 
