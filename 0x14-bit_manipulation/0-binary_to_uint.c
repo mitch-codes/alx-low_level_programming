@@ -10,11 +10,6 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	if (b == NULL)
-	{
-		return (0);
-	}
-
 	int i, j;
 	unsigned int result;
 	int sum = 0;
@@ -46,7 +41,11 @@ unsigned int binary_to_uint(const char *b)
 			sum = sum + (ch * temp);
 		}
 	}
-	sum = sum / 2;
-	result = (unsigned int) sum;
-	return (result);
+	if (sum != NULL)
+	{
+		sum = sum / 2;
+		result = (unsigned int) sum;
+		return (result);
+	}
+	return (0);
 }
