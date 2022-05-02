@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 	{
 		k = y >> j;
 		rem = k & 1;
-		printf("%d", rem);
+		putchar(rem + 48);
 	}
 	if (n == 0)
 	{
