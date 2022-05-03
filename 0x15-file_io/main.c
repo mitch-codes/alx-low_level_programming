@@ -7,13 +7,16 @@
  *
  * Return: Always 0.
  */
-int main(void)
+int main(int ac, char **av)
 {
-    ssize_t n;
-    
-    n = read_textfile("test", 3);
-    printf("\n(printed chars: %li)\n", n);
-    n = read_textfile("test", 2);
-    printf("\n(printed chars: %li)\n", n);
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
     return (0);
 }
