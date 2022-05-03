@@ -11,7 +11,7 @@ int main(void)
 {
     int res;
 
-    res = create_file("hi", "my name is");
+    res = create_file("hi", "");
     printf("-> %i)\n", res);
     return (0);
 }

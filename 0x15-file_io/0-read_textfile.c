@@ -31,6 +31,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buff = malloc(2000);
 	count = read(fd, buff, letters);
+	if (count < 0)
+	{
+		return (0);
+	}
 	buff[count] = '\0';
 	close(fd);
 	dprintf(1, "%s", buff);
