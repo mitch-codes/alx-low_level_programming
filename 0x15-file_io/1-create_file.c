@@ -7,11 +7,11 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - read the contents of a separate file
+ * create_file - create a file and its contents
  *
  * @filename: a string of the file name
- * @letters: the number of letters to be read
- * Return: the number of letters actually read;
+ * @text_content: the files content
+ * Return: 1 or -1 for success or failure
  */
 int create_file(const char *filename, char *text_content)
 {
