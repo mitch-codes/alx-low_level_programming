@@ -10,8 +10,7 @@
 int main(void)
 {
     int res;
-    
-    res = create_file("hi", "my name is test");
+    res = append_text_to_file("hi", "test");
     printf("-> %i)\n", res);
     return (0);
 }
