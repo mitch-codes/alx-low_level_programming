@@ -10,9 +10,10 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int y = n;
-	int i, j, rem;
+	int i, j;
 	unsigned long int k = n;
 	unsigned long int l = n;
+	unsigned long int rem;
 
 	for (i = 0; n != 0; i++)
 	{
