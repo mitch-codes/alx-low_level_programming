@@ -11,7 +11,6 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i, j;
-	unsigned int result;
 	int sum = 0;
 	int length = strlen(b);
 	int temp = 1;
@@ -31,7 +30,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		}
 	}
-	for (j = length - 2; j > 0; j--)
+	for (j = length - 1; j >= 0; j--)
 	{
 		char ch = b[j] - 48;
 
@@ -46,6 +45,5 @@ unsigned int binary_to_uint(const char *b)
 		}
 	}
 	sum = sum / 2;
-	result = (unsigned int) sum;
-	return (result);
+	return ((unsigned int) sum);
 }
