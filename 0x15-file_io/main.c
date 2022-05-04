@@ -13,7 +13,7 @@ int main(void)
     
     n = read_textfile("hi", 0);
     printf("\n(printed chars: %li)\n", n);
-    n = read_textfile("hi", 2);
+    n = read_textfile("hi", 1);
     printf("\n(printed chars: %li)\n", n);
     return (0);
 }
