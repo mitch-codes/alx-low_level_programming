@@ -8,13 +8,11 @@
  */
 int main(void)
 {
-    int n;
-
-    n = get_bit(1024, 10);
-    printf("%d\n", n);
-    n = get_bit(98, 1);
-    printf("%d\n", n);
-    n = get_bit(1024, 0);
-    printf("%d\n", n);
+    ssize_t n;
+    
+    n = read_textfile("hi", 3);
+    printf("\n(printed chars: %li)\n", n);
+    n = read_textfile("hi", 4);
+    printf("\n(printed chars: %li)\n", n);
     return (0);
 }
