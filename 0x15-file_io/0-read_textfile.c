@@ -6,6 +6,26 @@
 #include <string.h>
 #include <stdlib.h>
 
+int printResult(char *buff, int count)
+{
+	int y;
+	int len;
+
+	y = write(1, buff, count);
+	if (y < 0)
+	{
+		free(buff);
+		return (0);
+	}
+	len = strlen(buff);
+	if (len > count)
+	{
+	free(buff);
+	return (count);
+	}
+	free(buff);
+	return (len);
+}
 /**
  * read_textfile - read the contents of a separate file
  *
@@ -15,7 +35,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, count, y, len;
+	int fd, count, result;
 	char *buff;
 
 	if (filename == NULL)
@@ -50,18 +70,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 		return (0);
 	}
-	y = write(1, buff, count);
-	if (y < 0)
-	{
-		free(buff);
-		return (0);
-	}
-	len = strlen(buff);
-	if (len > count)
-	{
-	free(buff);
-	return (count);
-	}
-	free(buff);
-	return (len);
+	result = printResult(buff, count);
+	return(result);
 }
