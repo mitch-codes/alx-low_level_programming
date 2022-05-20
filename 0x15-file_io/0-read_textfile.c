@@ -6,6 +6,13 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ * printResult - print out the content
+ *
+ * @buff: string being printed
+ * @count: the number of letters to be read
+ * Return: letters actually printed;
+ */
 int printResult(char *buff, int count)
 {
 	int y;
@@ -71,5 +78,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	result = printResult(buff, count);
-	return(result);
+	return (result);
 }
