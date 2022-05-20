@@ -11,9 +11,9 @@ int main(void)
 {
     ssize_t n;
     
-    n = read_textfile("hi", 3);
+    n = read_textfile("hi", 10);
     printf("\n(printed chars: %li)\n", n);
-    n = read_textfile("hi", 4);
+    n = read_textfile("hi", 10);
     printf("\n(printed chars: %li)\n", n);
     return (0);
 }
