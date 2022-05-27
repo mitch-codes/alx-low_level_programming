@@ -16,15 +16,13 @@
 int printResult(char *buff, int count)
 {
 	int y;
-	int len;
 
 	y = write(1, buff, count);
-	if (y < 0)
+	if (y < 1)
 	{
 		free(buff);
 		return (0);
 	}
-	len = strlen(buff)
 	free(buff);
 	return (y);
 }
