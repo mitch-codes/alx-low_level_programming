@@ -13,25 +13,37 @@ void print_all(const char * const format, ...)
 {
 	int i = 0;
 	va_list ptr;
+	int len = strlen(format);
+
 	va_start(ptr, format);
 
 	while (format[i] != 0)
 	{
-		if (format[i] == 'c')
+		if (format[i] == 'c' || format[i] == 'i' ||
+				format[i] == 'f' || format[i] == 's')
 		{
+		switch (format[i])
+		{
+			case 'c':
 			printf("%c", va_arg(ptr, int));
-		}
-		if (format[i] == 'i')
-		{
+			break;
+
+			case 'i':
 			printf("%d", va_arg(ptr, int));
-		}
-		if (format[i] == 'f')
-		{
+			break;
+
+			case 'f':
 			printf("%f", va_arg(ptr, double));
-		}
-		if (format[i] == 's')
-		{
+			break;
+
+			case 's':
 			printf("%s", va_arg(ptr, char *));
+			break;
+		}
+		if (i != 0 && i != len - 1)
+		{
+			printf(", ");
+		}
 		}
 		i++;
 	}
