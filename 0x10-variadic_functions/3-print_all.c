@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 			printf("%s", va_arg(ptr, char *));
 			break;
 		}
-		if (i != 0 && i != len - 1)
+		if (i != len - 1)
 		{
 			printf(", ");
 		}
