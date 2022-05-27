@@ -24,14 +24,9 @@ int printResult(char *buff, int count)
 		free(buff);
 		return (0);
 	}
-	len = strlen(buff);
-	if (len > count)
-	{
+	len = strlen(buff)
 	free(buff);
-	return (count);
-	}
-	free(buff);
-	return (len);
+	return (y);
 }
 /**
  * read_textfile - read the contents of a separate file
