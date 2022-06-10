@@ -4,7 +4,7 @@
 #include"lists.h"
 
 /**
- * print_dlistint - print the values of adoubly linked list
+ * dlistint_len - print number of elements of linked list
  *
  * @h: the head pointer
  * Return: the number of elements in the linked list
