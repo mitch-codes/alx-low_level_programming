@@ -6,13 +6,14 @@
 /**
  * free_dlistint - frees up memory allocated for nodes of the list
  *
- * @h: the head pointer
+ * @head: the head pointer
  * Return: the number of elements in the linked list
  */
 
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *temp;
+
 	while (head != NULL)
 	{
 		temp = head->next;
