@@ -4,10 +4,11 @@
 #include"lists.h"
 
 /**
- * print_dlistint - print the values of adoubly linked list
+ * get_dnodeint_at_index - get the node at a particular index
  *
- * @h: the head pointer
- * Return: the number of elements in the linked list
+ * @head: the head pointer
+ * @index: the index of the node
+ * Return: the node at that particular index
  */
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
