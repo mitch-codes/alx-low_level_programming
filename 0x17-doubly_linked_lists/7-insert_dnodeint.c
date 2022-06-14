@@ -28,20 +28,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	temp->next = NULL;
 	temp->prev = NULL;
 
-	while (place != NULL)
+	while (i < idx)
 	{
-		if (i == idx - 1)
-		{
-			temp->next = place->next;
-			place->next->prev = temp;
-			place->next = temp;
-			temp->prev = place;
-			return (temp);
-		}
 		place = place->next;
-		i++;
+		i++
 	}
-	return (NULL);
+	place->next->prev = temp;
+	temp->next = place->next;
+	place->next = temp;
+	temp->prev = place;
+	return (temp);
 }
 
 
