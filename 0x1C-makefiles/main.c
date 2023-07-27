@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include "my.h"
 
 int main(void) {
-    printf("we are off");
-    return 1;
+    print_holberton();
 }
