@@ -1,6 +1,6 @@
 CC = gcc
 SRC = main.c holberton.c
-OBJ = $(SRC) $(wildcard *.o) 
+OBJ = $(SRC:.c=.o) 
 NAME = school
 
 all : $(OBJ)
