@@ -22,13 +22,13 @@ def island_perimeter(grid):
     for i in range(hsize):
         for j in range(wsize):
             if (grid[i][j] == 1):
-                if (grid[i][j-1] == 0 or grid[i][j-1] == None):
+                if (grid[i][j-1] == 0 or grid[i][j-1] is None):
                     total += 1
-                if (grid[i][j+1] == 0 or grid[i][j+1] == None):
+                if (grid[i][j+1] == 0 or grid[i][j+1] is None):
                     total += 1
-                if (grid[i-1][j] == 0 or grid[i-1][j] == None):
+                if (grid[i-1][j] == 0 or grid[i-1][j] is None):
                     total += 1
-                if (grid[i+1][j] == 0 or grid[i+1][j] == None):
+                if (grid[i+1][j] == 0 or grid[i+1][j] is None):
                     total += 1
 
     return total
