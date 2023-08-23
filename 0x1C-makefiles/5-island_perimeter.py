@@ -21,9 +21,8 @@ def island_perimeter(grid):
 
     for i in range(hsize):
         for j in range(wsize):
-
-            if (j != 0):
-                if (grid[i][j-1]):
+            if (grid[i][j] == 1):
+                if (j != 0):
                     if (grid[i][j-1] == 0):
                         total += 1
                 else:
