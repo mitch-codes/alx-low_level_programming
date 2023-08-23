@@ -36,13 +36,13 @@ def island_perimeter(grid):
                     total += 1
 
                 if (i != 0):
-                    if(grid[i-1][j] == 0):
+                    if (grid[i-1][j] == 0):
                         total += 1
                 else:
                     total += 1
-                
+
                 if (i is not hsize - 1):
-                    if(grid[i+1][j] == 0):
+                    if (grid[i+1][j] == 0):
                         total += 1
                 else:
                     total += 1
